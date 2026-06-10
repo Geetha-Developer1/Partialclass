@@ -8,6 +8,8 @@ namespace Partialclass
 {
     partial class Multimedia
     {
+       
+        
         internal void VideoPlay()
         {
             Console.WriteLine("Video is Playing...");
@@ -15,9 +17,14 @@ namespace Partialclass
     }
     partial class Education
     {
+        int marks;
+        public Education(int marks)
+        {
+            this.marks = marks;
+        }
         internal void College()
         {
-            Console.WriteLine("Student who are studying ofter 10th");
+            Console.WriteLine("Student who are studying ofter 10th"+marks);
         }
     }
     internal class Class2

@@ -60,10 +60,12 @@ namespace Partialclass
             m.VideoPlay();
             m.Display();
             Console.WriteLine("\n=====================\n");
-            Education e=new Education();
+            Education e=new Education("Maths");
+            Education e1 = new Education('a');
+            Education e2 = new Education(98);
             e.School();
-            e.College();
-            e.HigherEducation();
+            e2.College();
+            e1.HigherEducation();
             Console.WriteLine("\n==========Sealed Class===========\n");
             Bank b = new Bank();
             Console.WriteLine("Enter Username:");
