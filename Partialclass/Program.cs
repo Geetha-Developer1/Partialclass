@@ -6,11 +6,29 @@ using System.Threading.Tasks;
 
 namespace Partialclass
 {
-    sealed class Bank
+    class validation
+    {
+        string Uname="abc";
+        string PW="abc123";
+        public void validate(string uname,string pw)
+        {
+            if(Uname==uname && pw ==PW)
+            {
+                Console.WriteLine("Login Successfully and These are your Details: ");
+                Bank b = new Bank(1, "abc", "ameerpet");
+                b.BankDisplay();
+            }
+        }
+    }
+    sealed class Bank:validation
     {
         int bid;
         string bname;
         string bbranch;
+        public Bank()
+        {
+
+        }
         public Bank(int bid, string bname, string bbranch)
         {
             this.bid = bid;
@@ -23,6 +41,7 @@ namespace Partialclass
             Console.WriteLine("Bank Name is :" + bname);
             Console.WriteLine("Bank Branch is :" + bbranch);
         }
+
     }
     class dc //: Bank
     {
@@ -43,8 +62,12 @@ namespace Partialclass
             e.College();
             e.HigherEducation();
             Console.WriteLine("\n==========Sealed Class===========\n");
-            Bank b = new Bank(1231, "ABC Bank", "Ameerpet Branch");
-            b.BankDisplay();
+            Bank b = new Bank();
+            Console.WriteLine("Enter Username:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter Password:");
+            string pw=Console.ReadLine();
+            b.validate(name,pw);
         }
     }
 }
