@@ -45,7 +45,10 @@ namespace Partialclass
     }
     class dc //: Bank
     {
-
+       public void display()
+       {
+           // base.BankDisplay();   
+       }
     }
 
     internal class Program
